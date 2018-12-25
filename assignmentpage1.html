@@ -1,0 +1,323 @@
+<html>
+	<head>
+		<title>Simple Javascript Application</title>
+		<style type="text/css">
+			.edit {
+				position: fixed;
+				bottom: 560px;
+				right: 1000px; 
+			}
+		</style>
+	</head>
+	<body bgcolor="cyan">
+	<div id="page1">
+	<center>
+		<h2>User Information</h2>
+		  <input type="text" placeholder="FirstName" name="fname" id="fn"></input><br/><br/>
+		  <input type="text" placeholder="LastName" name="lname" id="ln"></input><br/><br/>
+		Gender : <select id="gender">
+					<option>Select</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="others">Others</option>
+				 </select><br/><br/>
+		Date Of Birth :
+						<select name="Day" id="dd">
+						<option>dd</option>
+						<option value='1'>1</option>
+						<option value='2'>2</option>
+						<option value='3'>3</option>
+						<option value='4'>4</option>
+						<option value='5'>5</option>
+						<option value='6'>6</option>
+						<option value='7'>7</option>
+						<option value='8'>8</option>
+						<option value='9'>9</option>
+						<option value='10'>10</option>
+						<option value='11'>11</option>
+						<option value='12'>12</option>
+						<option value='13'>13</option>
+						<option value='14'>14</option>
+						<option value='15'>15</option>
+						<option value='16'>16</option>
+						<option value='17'>17</option>
+						<option value='18'>18</option>
+						<option value='19'>19</option>
+						<option value='20'>20</option>
+						<option value='21'>21</option>
+						<option value='22'>22</option>
+						<option value='23'>23</option>
+						<option value='24'>24</option>
+						<option value='25'>25</option>
+						<option value='26'>26</option>
+						<option value='27'>27</option>
+						<option value='28'>28</option>
+						<option value='29'>29</option>
+						<option value='30'>30</option>
+						<option value='31'>31</option>
+				     </select>
+					
+						<select name="Month" id="mm">
+							<option>mm</option>
+							<option value='1'>Jan</option>
+							<option value='2'>Feb</option>
+							<option value='3'>Mar</option>
+							<option value='4'>Apr</option>
+							<option value='5'>May</option>
+							<option value='6'>Jun</option>
+							<option value='7'>Jul</option>
+							<option value='8'>Aug</option>
+							<option value='9'>Sept</option>
+							<option value='10'>Oct</option>
+							<option value='11'>Nov</option>
+							<option value='12'>Dec</option>
+						</select>
+					
+						<select name="year" id="yyyy">
+							<option>yyyy</option>
+							<option value='1975'>1975</option>
+							<option value='1976'>1976</option>
+							<option value='1977'>1977</option>
+							<option value='1978'>1978</option>
+							<option value='1979'>1979</option>
+							<option value='1980'>1980</option>
+							<option value='1981'>1981</option>
+							<option value='1982'>1982</option>
+							<option value='1983'>1983</option>
+							<option value='1984'>1984</option>
+							<option value='1985'>1985</option>
+							<option value='1986'>1986</option>
+							<option value='1987'>1987</option>
+							<option value='1988'>1988</option>
+							<option value='1989'>1989</option>
+							<option value='1990'>1990</option>
+							<option value='1991'>1991</option>
+							<option value='1992'>1992</option>
+							<option value='1993'>1993</option>
+							<option value='1994'>1994</option>
+							<option value='1995'>1995</option>
+							<option value='1996'>1996</option>
+							<option value='1997'>1997</option>
+							<option value='1998'>1998</option>
+							<option value='1999'>1999</option>
+							<option value='2000'>2000</option>
+							<option value='2001'>2001</option>
+							<option value='2002'>2002</option>
+							<option value='2003'>2003</option>
+							<option value='2004'>2004</option>
+							<option value='2005'>2005</option>
+							<option value='2006'>2006</option>
+							<option value='2007'>2007</option>
+							<option value='2008'>2008</option>
+							<option value='2009'>2009</option>
+							<option value='2010'>2010</option>
+							<option value='2011'>2011</option>
+						</select><br/><br/>
+						
+						 <input type="button" id="userpage1" value="Next" onclick="showHideInfo()"></input>
+						 <script lang="javascript">
+							document.getElementById('page2').style.display='none';
+							document.getElementById('page3').style.display='none';
+							function showHideInfo(){	
+								document.getElementById('page2').style.display= 'block';
+								document.getElementById('page1').style.display='none';
+							}
+							document.getElementById('page3').style.display='none';
+							function showPage3(){
+								document.getElementById('page3').style.display='block';
+								document.getElementById('page2').style.display='none';
+								document.getElementById('page1').style.display='none';
+							}
+							function confirm(){
+								console.log(document.getElementsByName('un'));
+								var a = document.getElementById("fn");
+								sessionStorage.setItem("fn",a.value);
+								var b = document.getElementById("ln");
+								sessionStorage.setItem("ln",b.value);
+								var c = document.getElementById("gender");
+								sessionStorage.setItem("gender",c.value);
+								var d = document.getElementById("dd");
+								sessionStorage.setItem("dd",d.value);
+								var e = document.getElementById("mm");
+								sessionStorage.setItem("mm",e.value);
+								var f = document.getElementById("yyyy");
+								sessionStorage.setItem("yyyy",f.value);
+				
+								var g = document.getElementById("address");
+								sessionStorage.setItem("address",g.value);
+								var h = document.getElementById("city");
+								sessionStorage.setItem("city",h.value);
+								var i = document.getElementById("pin");
+								sessionStorage.setItem("pin",i.value);
+								var j = document.getElementById("email");
+								sessionStorage.setItem("email",j.value);
+								var k = document.getElementById("state");
+								sessionStorage.setItem("state",k.value);
+								var l = document.getElementById("Phonetype");
+								sessionStorage.setItem("Phonetype",l.value);
+								var m = document.getElementById("phoneno");
+								sessionStorage.setItem("phoneno",m.value);
+				
+								var n = document.getElementById("un");
+								sessionStorage.setItem("un",n.value);
+								var o = document.getElementById("pw");
+								sessionStorage.setItem("pw",o.value);
+								
+								//user page details
+								var u = document.getElementById('un');
+								localStorage.setItem('un',u.value);
+
+								var passwd = document.getElementById('pw');
+								localStorage.setItem('pw',passwd.value);
+								
+								//Login page details
+								var username = document.getElementById('user');
+								localStorage.setItem('user',username.value);
+
+								var password = document.getElementById('pwd');
+								localStorage.setItem('pwd',password.value);
+							}
+							function logInPage(){
+								document.getElementById('page3').style.display = 'none';
+								document.getElementById('page4').style.display = 'block';
+								var u1 = document.getElementById('un').value;
+								var p1 = document.getElementById('pw').value;
+								 if(u1=="" || p1==""){
+									alert("Username or password cannot be empty");
+									document.getElementById('page3').style.display = 'block';
+									document.getElementById('page4').style.display = 'none';
+								 }
+							}
+							function showData(){
+								var fname = document.getElementById('fn').value;
+								var lname = document.getElementById('ln').value;
+								var gender = document.getElementById('gender').value;
+								var date = document.getElementById('dd').value;
+								var month = document.getElementById('mm').value;
+								var year = document.getElementById('yyyy').value;
+								var address = document.getElementById('address').value;
+								var city = document.getElementById('city').value;
+								var pin = document.getElementById('pin').value;
+								var email = document.getElementById('email').value;
+								var state = document.getElementById('state').value;
+								var Phonetype = document.getElementById('Phonetype').value;
+								var phoneno = document.getElementById('phoneno').value;
+								var u1 = document.getElementById('un').value;
+								var p1 = document.getElementById('pw').value;
+								var u2 = document.getElementById('user').value;
+								var p2 = document.getElementById('pwd').value;
+								
+								
+								 if((u1 == u2 && p1 == p2)){
+									document.write("First Name : "+fname+"<br/>");
+									document.write("Last Name : "+lname+"<br/>");	
+									document.write("Gender : "+gender+"<br/>");
+									document.write("DOB : "+date+"/"+month+"/"+year+"<br/>");
+									document.write('address : '+address+"<br/>");
+									document.write('city : '+city+"<br/>");
+									document.write('pin : '+pin+"<br/>");
+									document.write('email : '+email+"<br/>");
+									document.write('state : '+state+"<br/>");
+									//document.write('Phonetype : '+Phonetype+"<br/>");
+									document.write('Phoneno : '+phoneno+"<br/>");
+									
+									var editButton = '<a href="AfterLogIn.html" id="edit" onclick="return getData();">Edit</a>' 
+									document.write(editButton);
+									
+								}else{
+									alert("username or password is incorrect");
+								}
+							}	
+								<!-- function MyFunc(){ -->
+										<!-- <!-- var z=document.getElementById('home').checked; --> -->
+										<!-- <!-- document.getElementById('home').innerHTML = z; --> -->
+									<!-- if((document.getElementById('home')).checked == true){ -->
+										<!-- document.write("Home is checked"); -->
+									<!-- }else if((document.getElementById('cell')).checked == true){ -->
+										<!-- console.log("cell is checked"); -->
+									<!-- }else if((document.getElementById('work')).checked == true){ -->
+										<!-- console.log("work is checked"); -->
+									<!-- }else{ -->
+										<!-- console.log("others is checked"); -->
+									<!-- }	 -->
+								<!-- } -->
+						</script> 
+					</center>
+				</div>
+				
+	<div id="page2" style="display:none;">			
+		<center>
+			<h2>User Information</h2>
+			Address : <input class="address" id="address" type="text" placeholder="Address" name="address" /><br/><br/>
+			City : <input class="city" id="city" type="text" placeholder="City" name="city" /><br/><br/>
+			Pincode : <input class="pin" id="pin" type="number" placeholder="Pincode" name="pin" /><br/><br/>
+			Email-Id : <input class="email" id="email" type="email" placeholder="Email" name="email" /><br/><br/>
+			State : <select id="state">
+						<option>Select State</option>
+						<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+						<option value="Andhra Pradesh">Andhra Pradesh</option>
+						<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+						<option value="Assam">Assam</option>
+						<option value="Bihar">Bihar</option>
+						<option value="Chandigarh">Chandigarh</option>
+						<option value="Chhattisgarh">Chhattisgarh</option>
+						<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+						<option value="Daman and Diu">Daman and Diu</option>
+						<option value="Delhi">Delhi</option>
+						<option value="Goa">Goa</option>
+						<option value="Gujarat">Gujarat</option>
+						<option value="Haryana">Haryana</option>
+						<option value="Himachal Pradesh">Himachal Pradesh</option>
+						<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+						<option value="Jharkhand">Jharkhand</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="Kerala">Kerala</option>
+						<option value="Lakshadweep">Lakshadweep</option>
+						<option value="Madhya Pradesh">Madhya Pradesh</option>
+						<option value="Maharashtra">Maharashtra</option>
+						<option value="Manipur">Manipur</option>
+						<option value="Meghalaya">Meghalaya</option>
+						<option value="Mizoram">Mizoram</option>
+						<option value="Nagaland">Nagaland</option>
+						<option value="Orissa">Orissa</option>
+						<option value="Pondicherry">Pondicherry</option>
+						<option value="Punjab">Punjab</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Sikkim">Sikkim</option>
+						<option value="Tamil Nadu">Tamil Nadu</option>
+						<option value="Tripura">Tripura</option>
+						<option value="Uttaranchal">Uttaranchal</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="West Bengal">West Bengal</option>
+					</select><br/><br/>
+						<div id="Phonetype">	
+			Phone Type : <input id="home" type="checkbox" value="home">Home </input><br/><br/>
+						 <input id="cell" type="checkbox" value="cell">Cell </input><br/><br/>
+						 <input id="work" type="checkbox" value="work">Work </input><br/><br/>
+						 <input id="others" type="checkbox" value="others">Others </input><br/><br/>
+						 </div>
+			Phone-no :<input class="phoneno" id="phoneno" type="number" placeholder="Phone Number" value="phone"/><br/><br/>
+			<input type="button" id="userpage2" value="Next" onclick="showPage3()" ></input>
+			</center>
+	</div>		
+	
+		<div id="page3" style="display:none;">	
+		  <center>
+			<h2>User Registration</h2>
+			Username : <input type="text" id="un" placeholder="Username" name="username"></input><br/><br/>
+			Password : <input type="password" id="pw" placeholder="Password" name="pass"></input><br/><br/>
+			<input type="Submit" name="submit" Value="Submit" onclick="logInPage(); confirm();"></input>
+		  </center>
+		</div>
+		
+		<div id="page4" style="display:none;">		
+		  <center>
+			<h2>Login Page</h2>
+			Username : <input type="text" id="user" placeholder="Username" name="un1"></input><br/><br/>
+			Password : <input type="password" id="pwd" placeholder="Password" name="pwd"></input><br/><br/>
+			<a href="forgot password">forgot password</a><br/><br/>
+				  <button type="Submit" name="submit" Value="Submit" onclick="showData();">Login</button>
+		  </center>
+		</div>
+	</body>
+</html>
